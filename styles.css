@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap");
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards; /* Body fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Left-align the navbar items */
+  background-color: #222;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  opacity: 1;
+  animation: slideInNav 1.5s forwards; /* Navbar sliding animation */
+}
+
+@keyframes slideInNav {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav a {
+  color: #e63946;
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 1.3em;
+  font-weight: bold;
+  transition: color 0.3s;
+  opacity: 0;
+  animation: fadeInNavLinks 1.5s forwards;
+}
+
+@keyframes fadeInNavLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #111;
+  color: #e63946;
+  padding: 50px 10%;
+  text-align: left;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInHeader 2s forwards; /* Header fade-in */
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .logo-container {
+  flex: 0 1 auto;
+  text-align: left;
+  margin-right: 30px;
+}
+
+header .logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
+  opacity: 0;
+  animation: fadeInLogo 2s forwards; /* Logo fade-in */
+}
+
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .logo-container:hover .logo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+header .name-container {
+  flex: 1;
+  text-align: left;
+  padding-left: 40px;
+}
+
+header .main-title {
+  font-family: "Afacad Flux", sans-serif;
+  font-size: 4.5em;
+  margin: 0;
+  transition: transform 0.3s;
+  letter-spacing: 5px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInName 2s forwards; /* Name fade-in */
+}
+
+@keyframes fadeInName {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .main-title:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for contact icons */
+header .contact-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInIcons 2s forwards; /* Contact icons fade-in */
+}
+
+@keyframes fadeInIcons {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .icon-link {
+  color: #e63946;
+  font-size: 2.2em;
+  text-decoration: none;
+  transition: color 0.3s;
+  opacity: 0;
+  animation: fadeInIconLinks 2s forwards; /* Icons fade-in */
+}
+
+@keyframes fadeInIconLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .icon-link:hover {
+  color: #fff;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeInSection 2s forwards; /* Section fade-in */
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.7);
+}
+
+h2 {
+  color: #e63946;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 5px;
+  animation: fadeInText 2s forwards; /* Title fade-in */
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  flex: 1 1 calc(50% - 20px);
+  background: #222;
+  padding: 15px;
+  border: 1px solid #e63946;
+  transition: transform 0.3s, background-color 0.3s;
+  opacity: 0;
+  animation: fadeInProjects 2s forwards; /* Projects fade-in */
+}
+
+@keyframes fadeInProjects {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  background-color: #333;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #222;
+  border: 1px solid #e63946;
+  transition: transform 0.3s, background-color 0.3s;
+  opacity: 0;
+  animation: fadeInSkills 2s forwards; /* Skills fade-in */
+}
+
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skills-list li:hover {
+  transform: translateX(10px);
+  background-color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #111;
+  color: #e63946;
+  transition: background-color 0.3s;
+  opacity: 0;
+  animation: fadeInFooter 2s forwards; /* Footer fade-in */
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer:hover {
+  background-color: #222;
+}
